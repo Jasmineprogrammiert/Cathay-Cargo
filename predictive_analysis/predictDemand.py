@@ -13,8 +13,8 @@ df['Departure Date'] = pd.to_datetime(df['Departure Date']).dt.date
 
 df = df[['Departure Date','Booking window','Origin', 'Destination', 'Product','Weight',  'Total Piece']]
 
-df.to_csv('dataConverted', index=False) 
-data = pd.read_csv('dataConverted')
+df.to_csv('dataConverted.csv', index=False) 
+data = pd.read_csv('dataConverted.csv')
 
 # use LabelEncoder to convert categorical data into numerical
 label_encoder = LabelEncoder()
